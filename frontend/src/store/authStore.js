@@ -1,6 +1,9 @@
 import { create } from "zustand"; //global state management Library
 import  axios  from "axios";//Axios helps your app communicate with APIs or backend servers.
-const API_URL =import.meta.env.MODE ==="development" ?  "http://localhost:5000/api/auth" : "/api/auth";
+const API_URL =
+  import.meta.env.MODE === "development"
+    ? "http://localhost:5000/api/auth"
+    : "https://mern-auth-8rno.onrender.com/api/auth";
 
 axios.defaults.withCredentials = true;
 
