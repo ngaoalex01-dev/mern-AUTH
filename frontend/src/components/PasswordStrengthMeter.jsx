@@ -10,6 +10,7 @@ const PasswordCriteria = ({ password }) => {
 	];
 
 	return (
+    //loop through criteria and display check or x icon based on whether criteria is met, also change text color based on met or not
 		<div className='mt-2 space-y-1'>
 			{criteria.map((item) => (
 				<div key={item.label} className='flex items-center text-xs'>
@@ -73,4 +74,4 @@ const PasswordStrengthMeter = ({ password}) => {
   );
 };
 
-export default PasswordStrengthMeter
+export default PasswordStrengthMeter;

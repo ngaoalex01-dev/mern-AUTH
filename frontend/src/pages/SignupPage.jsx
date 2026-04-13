@@ -8,11 +8,13 @@ import { useAuthStore } from "../store/authStore";
 
 const SignupPage = () => {
 
+  //react hook state for form inputs
   const [ name, setName] = useState('');
   const [ email, setEmail] = useState('');
   const [ password, setPassword] = useState('');
   const navigate = useNavigate();
 
+  //this is destructuring the signup function, error and isLoading state from the auth store
   const { signup, error, isLoading  } = useAuthStore();
 
   const handleSignup = async (e) => {
