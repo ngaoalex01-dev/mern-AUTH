@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import PasswordStrengthMeter from "../components/PasswordStrengthMeter";
 import { useAuthStore } from "../store/authStore";
 
-const SignupPage = () => {
+const SignUpPage = () => {
 
   //react hook state for form inputs
   const [ name, setName] = useState('');
@@ -90,4 +90,4 @@ const SignupPage = () => {
     </motion.div>
   );
 };
-export default SignupPage;
+export default SignUpPage;
