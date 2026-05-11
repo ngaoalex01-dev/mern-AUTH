@@ -28,8 +28,12 @@ const DashboardPage = () => {
 					transition={{ delay: 0.2 }}
 				>
           <h3 className='text-xl font-semibold text-green-400 mb-3'>Profile Information</h3>
-					<p className='text-gray-300'>Name: {user.name}</p>
-					<p className='text-gray-300'>Email: {user.email}</p>
+					<p className='text-gray-300'>
+            <span className='font-bold'>Name: </span>{user.name}
+          </p>
+					<p className='text-gray-300'>
+            <span className='font-bold'>Email: </span>{user.email}
+          </p>
         </motion.div>
         <motion.div
 					className='p-4 bg-gray-800 bg-opacity-50 rounded-lg border border-gray-700'
@@ -74,4 +78,4 @@ const DashboardPage = () => {
   )
 }
 
-export default DashboardPage
+export default DashboardPage;

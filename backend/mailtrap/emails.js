@@ -2,6 +2,7 @@ import { transporter } from "./gmail.config.js";
 import { VERIFICATION_EMAIL_TEMPLATE, PASSWORD_RESET_REQUEST_TEMPLATE, PASSWORD_RESET_SUCCESS_TEMPLATE, WELCOME_EMAIL_TEMPLATE } from "./emailTemplates.js";
 
 export const sendVerificationEmail = async (email, verificationToken) => {
+  
 	 try {
     const info = await transporter.sendMail({
       from: `"Chatify" <${process.env.EMAIL_USER}>`,
