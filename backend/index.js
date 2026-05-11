@@ -22,11 +22,15 @@ app.use("/api/auth", authRoutes);
 
 
 //make ready for production
- if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "frontend", "dist")));
+const rootDir = path.resolve();
+      
+if (process.env.NODE_ENV === "production") {
+  const frontendPath = path.join(rootDir, "frontend", "dist");
+
+  app.use(express.static(frontendPath));
 
   app.use((req, res) => {
-    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+    res.sendFile(path.join(frontendPath, "index.html"));
   });
 }
 

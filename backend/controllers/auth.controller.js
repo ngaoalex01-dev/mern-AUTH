@@ -137,8 +137,12 @@
 
       await user.save();
 
+      const resetURL = `${process.env.CLIENT_URL}/reset-password/${resetToken}`;
+
+      console.log("Reset URL:", resetURL);
+
       //send email
-      await sendPasswordResetEmail(user.email, `${process.env.CLIENT_URL}/reset-password/${resetToken}`);
+      await sendPasswordResetEmail(user.email, resetURL);
 
       res.status(200).json({ success: true, message: "Password reset link sent to your email" });
 

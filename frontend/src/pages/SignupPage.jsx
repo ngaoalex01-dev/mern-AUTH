@@ -47,7 +47,7 @@ const SignUpPage = () => {
 						type='text'
 						placeholder='Full Name'
 						value={name}
-						onChange={(e) => setName(e.target.value)}
+						onChange={(e) => setName(e.target.value)}//updates the name state after each keystroke when user types in the input field
 					/>
           <Input
 						icon={Mail}

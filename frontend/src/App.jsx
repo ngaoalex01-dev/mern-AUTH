@@ -43,6 +43,7 @@ const RedirectAuthenticatedUser = ({ children }) => {
 function App() {
 	const { isCheckingAuth, checkAuth } = useAuthStore();
 
+  //when component mounts, check if user is authenticated
 	useEffect(() => {
 		checkAuth();
 	}, [checkAuth]);
